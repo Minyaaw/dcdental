@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="vuesax/linear/mouse">
+<g id="mouse">
+<path id="Vector" d="M24 4C15.74 4 9 10.74 9 19V29C9 37.26 15.74 44 24 44C32.26 44 39 37.26 39 29V19C39 10.74 32.26 4 24 4Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M24 26C25.66 26 27 27.34 27 29V33C27 34.66 25.66 36 24 36C22.36 36 21 34.66 21 33V29C21 27.34 22.36 26 24 26Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M24 36V44" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>
