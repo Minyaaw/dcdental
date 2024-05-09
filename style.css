@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* BODY, GRID AND HEADERS */
+
+body{
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  /* background-color: gray; */
+}
+
+h1{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #FFF;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 275;
+  
+  span{
+    text-decoration-line: underline;
+    font-weight: 700;
+  }
+  
+}
+
+h2{
+  font-size: 90px;
+  font-weight: 600;
+  color: #000;
+}
+
+h3{
+  color: #000;
+  font-size: 44px;
+  font-weight: 400;
+  span{
+    font-weight: 400;
+    text-decoration-line: underline;
+  }
+}
+
+.h3-dentistas{
+  color: #7B7B7B;
+  text-align: center;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.h3-rdv{
+  color: #7B7B7B;
+  font-size: 85px;
+  font-weight: 700;
+}
+
+h4{
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+h5{
+  color: #7B7B7B;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 14px;
+}
+
+.container{
+  margin: 20px 100px;
+}
+
+/* REUSABLE CLASSES */
+
+.d-flex{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #FFF;
+}
+
+.content-hero{
+margin-top: 20%;
+}
+
+.a-center{
+  align-items: center;
+}
+
+.t-center{
+  text-align: center;
+}
+
+.mt-85{
+  margin-top: 85px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.mt-40{
+  margin-top: 40px;
+}
+
+.mt-90{
+  margin-top: 90px;
+}
+
+.container-hero{
+ margin: 0px 100px;
+}
+
+/* HEADER */
+
+header {
+  width: calc(100% - 200px);
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.80);
+  backdrop-filter: blur(10px);
+
+  a{
+    color: white;
+  }
+}
+
+ul{
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.cta-open-menu{
+  display: none;
+}
+
+/* HERO SECTION */
+
+.hero-section{
+  background-image: url("/assets/bg-img-hero.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 110vh;
+} 
+
+.widht-60{
+  padding-top: 26%;
+}
+
+/* SPECIAL ELEMENTS */
+
+.scroll-down-center{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 4%;
+}
+
+.paragraph-header{
+  /* color: #FFF; */
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.hero-paragraph-text{
+  margin-bottom: 50px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.paragraph-text{
+  border-color: #454545;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.line-separate {
+  width: 100%;
+  border-color: #828282;
+}
+
+
+.cta-rdv{
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+
+  display: inline-flex;
+  height: 43px;
+  padding-left: 26px;
+  padding-right: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  border-radius: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  background: rgba(235, 109, 18, 0.60);
+  backdrop-filter: blur(23.200000762939453px);
+}
+
+.cta-rdv-stronger{
+  background: #EB6D12;
+}
+
+.card-tratamentos{
+  width: 295px;
+  height: 387px;
+  flex-shrink: 0;
+  border-radius: 21px;
+  border: 1px solid #CFCFCF;
+}
+
+.card-tratamentos-orto-trad{
+  background: url("../public/images/orto-tradicional.png") lightgray 50% / cover no-repeat;
+}
+
+.card-tratamentos-blanch{
+  background: url("../public/images/blanchiment.png") lightgray 50% / cover no-repeat;
+}
+
+.card-tratamentos-endo{
+  background: url("../public/images/endo.png") lightgray 50% / cover no-repeat;
+}
+
+.card-tratamentos-orto-invis{
+  background: url("../public/images/invisa.png") lightgray 50% / cover no-repeat;
+}
+
+.card-tratamentos-urgences{
+  background: url("../public/images/urgences.png") lightgray 50% / cover no-repeat;
+}
+
+.card-tratamentos-detart{
+  background: url("../public/images/detartrage.png") lightgray 50% / cover no-repeat;
+}
+
+.tratamentos{
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.grid-card-tratamentos{
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.btn-tratamentos{
+  padding: 10px;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(9.699999809265137px);
+
+  h4{
+    margin: 0;
+  }
+}
+
+.card-bg{
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #FFF;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-body{
+  width: 550px;
+  height: 413px;
+  padding: 20px;
+  flex-shrink: 0;
+  border-radius: 8px 8px 16px 16px;
+  background: #FFF;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.15);
+}
+
+.group-dr{
+  p{
+    margin: 0
+  };
+}
+
+.dr-small{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.dr-big{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.btn-experience{
+  width: 224px;
+  height: 43px;
+  padding: 0px 20px;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 46px;
+  border: 1px solid #B5B5B5;
+  backdrop-filter: blur(23.200000762939453px);
+
+  p{
+    font-size: 16px;
+  }
+}
+
+.btn-main-expertise{
+  width: 224px;
+  height: 24px;
+  padding: 7px 16px;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 10px;
+  background: #000;
+  color: white;
+}
+
+.btn-expertise{
+  width: 224px;
+  height: 24px;
+  padding: 7px 16px;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 0.5px solid #BEBEBE;
+  background: #F3F3F3;
+}
+
+.p-expertise{
+  color: #454545;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.hr-expertise{
+  width: 100%;
+  border-color: #C6C6C6;
+}
+
+/* FOOTER */
+
+footer{
+  background: #F8F8F8;
+}
+
+.footer-content{
+  margin: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.horario-grid{
+  display: flex;
+  padding: 6px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  p{
+    margin: 0;
+  }
+}
+
+.horarios-cinza{
+  padding: 6px;
+  border-radius: 4px;
+  background: #E6E6E6;
+}
+
+.link-maps{
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
+
+.footer-items{
+  align-items: flex-start;
+  gap: 10px;
+  p{
+    margin: 0;
+  }
+}
+
+.span-footer{
+  color: #F05BBA;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
