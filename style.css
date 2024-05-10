@@ -50,6 +50,7 @@ h3{
   color: #7B7B7B;
   font-size: 85px;
   font-weight: 700;
+  margin: 0;
 }
 
 h4{
@@ -96,6 +97,10 @@ margin-top: 20%;
   margin-top: 85px;
 }
 
+.mt-10{
+  margin-top: 10px;
+}
+
 .mt-20{
   margin-top: 20px;
 }
@@ -104,8 +109,16 @@ margin-top: 20%;
   margin-top: 40px;
 }
 
+.mt-70{
+  margin-top: 70px;
+}
+
 .mt-90{
   margin-top: 90px;
+}
+
+.mb-20{
+  margin-bottom: 20px;
 }
 
 .container-hero{
@@ -151,7 +164,7 @@ ul{
 
 .img-bg{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   object-fit: cover;
@@ -185,7 +198,7 @@ main{
 .parent-grid{
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto-fit auto;
+  grid-template-rows: auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
@@ -195,16 +208,33 @@ main{
 {
   width: 300px;
   height: 380px;
-  border-radius: 30px;
+  position: relative;
 
   img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30px;
   }
 }
 
+.content-grid{ 
+  /* Ver uma maneira melhor de alocar os conteúdos */
+  width: 100%; 
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: absolute;
+  top: 0;
+  
+  botton{
+    width: 720px;
+  }
+
+}
 
 
 /* SPECIAL ELEMENTS */
@@ -259,28 +289,8 @@ main{
   background: #EB6D12;
 }
 
-.card-tratamentos{
-  width: 295px;
-  height: 387px;
-  flex-shrink: 0;
-  border-radius: 21px;
-  border: 1px solid #CFCFCF;
-}
 
-
-.tratamentos{
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.grid-card-tratamentos{
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.btn-tratamentos{
+/* .btn-care{
   padding: 10px;
   justify-content: center;
   gap: 10px;
@@ -291,7 +301,7 @@ main{
   h4{
     margin: 0;
   }
-}
+} */
 
 .card-bg{
   align-items: center;
@@ -382,6 +392,13 @@ main{
 
 footer{
   background: #F8F8F8;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  p {
+    color: #000;
+  }
 }
 
 .footer-content{
