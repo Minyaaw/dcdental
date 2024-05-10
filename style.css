@@ -4,8 +4,7 @@
 
 body{
   font-family: "Poppins", sans-serif;
-  margin: 0;
-  /* background-color: gray; */
+  margin: 20px 100px;
 }
 
 h1{
@@ -24,18 +23,13 @@ h1{
 }
 
 h2{
-  font-size: 90px;
-  font-weight: 600;
-  color: #000;
-}
-
-h3{
+  margin: 0px;
   color: #000;
   font-size: 44px;
   font-weight: 400;
   span{
-    font-weight: 400;
-    text-decoration-line: underline;
+  font-weight: 400;
+  text-decoration-line: underline;
   }
 }
 
@@ -44,6 +38,12 @@ h3{
   text-align: center;
   font-size: 44px;
   font-weight: 500;
+}
+
+h3{
+  font-size: 90px;
+  font-weight: 600;
+  color: #000;
 }
 
 .h3-rdv{
@@ -149,25 +149,65 @@ ul{
 
 /* HERO SECTION */
 
-.hero-section{
-  background-image: url("/assets/bg-img-hero.jpeg");
-  background-size: cover;
+.img-bg{
   width: 100%;
-  height: 110vh;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-section{
+  width: 100%;
+  height: 100vh;
 } 
 
 .widht-60{
-  padding-top: 26%;
+  padding-top: 16%;
 }
-
-/* SPECIAL ELEMENTS */
 
 .scroll-down-center{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 4%;
+  margin-top: 7%;
 }
+
+/* MAIN */
+main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.parent-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto-fit auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.grid1, .grid2, .grid3, 
+.grid4, .grid5, .grid6
+{
+  width: 300px;
+  height: 380px;
+  border-radius: 30px;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+}
+
+
+
+/* SPECIAL ELEMENTS */
 
 .paragraph-header{
   /* color: #FFF; */
@@ -194,7 +234,6 @@ ul{
   width: 100%;
   border-color: #828282;
 }
-
 
 .cta-rdv{
   color: #FFF;
@@ -228,29 +267,6 @@ ul{
   border: 1px solid #CFCFCF;
 }
 
-.card-tratamentos-orto-trad{
-  background: url("../public/images/orto-tradicional.png") lightgray 50% / cover no-repeat;
-}
-
-.card-tratamentos-blanch{
-  background: url("../public/images/blanchiment.png") lightgray 50% / cover no-repeat;
-}
-
-.card-tratamentos-endo{
-  background: url("../public/images/endo.png") lightgray 50% / cover no-repeat;
-}
-
-.card-tratamentos-orto-invis{
-  background: url("../public/images/invisa.png") lightgray 50% / cover no-repeat;
-}
-
-.card-tratamentos-urgences{
-  background: url("../public/images/urgences.png") lightgray 50% / cover no-repeat;
-}
-
-.card-tratamentos-detart{
-  background: url("../public/images/detartrage.png") lightgray 50% / cover no-repeat;
-}
 
 .tratamentos{
   flex-wrap: wrap;
