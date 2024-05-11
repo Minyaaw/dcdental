@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* BODY, GRID AND HEADERS */
-
+*
 body{
   font-family: "Poppins", sans-serif;
   margin: 20px 100px;
@@ -176,36 +176,132 @@ ul{
 }
 
 /* MAIN */
+
 main{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.parent-grid{
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto-fit auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+.img-behide{
+  background-image: url("/public/images/happyemoji.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 120%;
+  left: -10%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.grid1, .grid2, .grid3, 
-.grid4, .grid5, .grid6
+.parent-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.card1{
+  background-image: url("/public/images/Endodontie.png");
+}
+
+.card2{
+  background-image: url('/public/images/blanchiment.png');
+}
+
+.card3{
+  background-image: url('/public/images/Orthodontie_invisible.png');
+}
+
+.card4{
+  background-image: url('/public/images/Orthodontie_traditionnelle.png');
+}
+
+.card5{
+  background-image: url('/public/images/detartrage.png');
+}
+
+.card6{
+  background-image: url('/public/images/urgences.png');
+}
+
+.card1, .card2, .card3,
+.card4, .card5, .card6
 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #CFCFCF;
+
   width: 300px;
   height: 380px;
-  border-radius: 30px;
+  padding: 10px;
+  border-radius: 20px;
+  transition: 2s;
+}
 
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
+.card1:hover, .card2:hover, .card3:hover,
+.card4:hover, .card5:hover, .card6:hover
+{
+  transform: scale(1.04);
+  border: 1px solid rgb(245, 225, 188) ;
+  cursor: pointer;
+  transition: 2s;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.295);
+}
+
+.header-card{
+  border-radius: 12px;
+  background: #0000004d;
+  backdrop-filter: blur(9px);
+
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    padding: 10px;
+
+    color: #FFF;
+    font-weight: 500;
   }
 }
 
+.position-icon{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 
+.header-preview{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.preview{
+  width: 600px;
+  padding: 20px;
+  border-radius: 21px;
+  border: 1px solid #CFCFCF;
+  background: linear-gradient(180deg, rgba(36, 35, 35, 0.90) 0%, rgba(0, 0, 0, 0.90) 97%), 
+  rgb(233, 206, 206) 50%;
+
+  color: #FFF;
+}
+
+.btns-preview{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  button{
+    width: 50%;
+  }
+}
 
 /* SPECIAL ELEMENTS */
 
@@ -252,11 +348,24 @@ main{
   border-radius: 46px;
   border: 1px solid rgba(255, 255, 255, 0.30);
   background: rgba(235, 109, 18, 0.60);
-  backdrop-filter: blur(23.200000762939453px);
+  backdrop-filter: blur(23px);
 }
 
 .cta-rdv-stronger{
   background: #EB6D12;
+}
+
+.cta-close{
+  background-color: rgba(5, 5, 5, 0.048);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 600;
+  height: 43px;
+
+
+  border-radius: 46px;
+  backdrop-filter: blur(20px);
 }
 
 .card-tratamentos{
@@ -265,19 +374,6 @@ main{
   flex-shrink: 0;
   border-radius: 21px;
   border: 1px solid #CFCFCF;
-}
-
-
-.tratamentos{
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.grid-card-tratamentos{
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 
 .btn-tratamentos{
