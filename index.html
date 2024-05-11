@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DC Dental</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/scrollbard.css">
 </head>
 
 <body>
@@ -60,8 +61,10 @@
       <h2>Découvrez nos <br> services, <span>Faites <br> briller votre sourire.</span></h2>
     </div>  
 
-    <div id="Open" class="parent-grid">
-      <div class="card1" onclick="openModal()">
+    <div class="parent-grid">
+      <div id="overley"></div>
+
+      <div id="btnModal" class="card1">
           <div class="header-card">
             <span>Endodontie
               <svg width="30" height="30" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -177,14 +180,13 @@
     </div>
   </main>
 
-  <div class="preview">
+  <div id="open-review" class="preview">
     <div class="header-preview">
         <svg width="30" height="30" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path id="Star 1" d="M36 0L37.4071 29.3799L50.6425 3.11236L39.9781 30.5246L62.7532 11.9113L41.8613 32.616L70.238 24.8754L42.7309 35.2926L71.8028 39.763L42.4368 38.0914L67.1769 54L41.0296 40.5287L57.1603 65.1246L38.7528 42.1829L43.4848 71.2133L36 42.768L28.5152 71.2133L33.2472 42.1829L14.8397 65.1246L30.9704 40.5287L4.82309 54L29.5632 38.0914L0.197212 39.763L29.2691 35.2926L1.76197 24.8754L30.1387 32.616L9.24679 11.9113L32.0219 30.5246L21.3575 3.11236L34.5929 29.3799L36 0Z" fill="#D0FF6D"/>
         </svg>
         <p>Endodontie</p>
     </div>
-    <p>What is it?</p>
     <p>Lorem ipsum dolor sit amet consectetur. Gravida eget tellus pharetra eu justo. At tortor leo magna viverra condimentum id tempus. Ultrices bibendum scelerisque purus lectus ut ac. Felis gravida elementum nunc in vitae lorem adipiscing.</p>
     <div class="btns-preview">
         <button class="cta-rdv">
@@ -194,7 +196,7 @@
             <path d="M19.6899 28.9717L26.1433 22.5L19.6899 16.0283" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <button class="cta-close">
+        <button id="btnClose" class="cta-close">
           Close
         </button>
     </div>
@@ -369,5 +371,6 @@
       <span class="span-footer t-center">Designed by PixelCat</span>
     </div>
   </footer>
+  <script src="/script.js"></script>
 </body>
 </html>
