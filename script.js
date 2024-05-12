@@ -1,27 +1,43 @@
-//Modal Open
-var preview = document.getElementById("open-review");
-var btn = document.getElementById("btnModal");
-var close = document.getElementById("btnClose");
-var overley = document.getElementById("overley");
-var card = document.getElementById("btnModal");
+const modal = document.getElementById('modal');
+const modalBtns = document.querySelectorAll('.modal-btn');
+const closeBtn = document.querySelector('.cta-close');
+const overlay = document.getElementById('overlay');
+const scaleActive = document.querySelectorAll('.scaleActive');
 
-btn.onclick = function (){
-    preview.style.display = "block";
-    overley.style.display = "block";
-    card.classList.add("active");
-    body.style.overflow = "hidden"
+modalBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        openModal();
+        activateCard(btn);
+    });
+});
+
+closeBtn.addEventListener('click', function() {
+    closeModal();
+    deactivateAllCards();
+});
+
+overlay.addEventListener('click', function() {
+    closeModal();
+    deactivateAllCards();
+});
+
+function openModal() {
+    modal.style.display = 'block';
+    overlay.style.display = 'block';
 }
 
-close.onclick = function (){
-    preview.style.display = "none";
-    overley.style.display = "none";
-    card.classList.remove("active");
+function closeModal() {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
 }
 
-window.onclick = function(event) {
-    if (event.target !== preview && !preview.contains(event.target) && event.target !== btn) {
-        preview.style.display = "none";
-        overley.style.display = "none";
-        card.classList.remove("active");
-    }
+function activateCard(btn) {
+    const card = btn.closest('.scaleActive');
+    card.classList.add('active');
+}
+
+function deactivateAllCards() {
+    scaleActive.forEach(function(card) {
+        card.classList.remove('active');
+    });
 }
