@@ -117,6 +117,10 @@ margin-top: 20%;
   margin-top: 90px;
 }
 
+.mt-110{
+  margin-top: 110px;
+}
+
 .mb-20{
   margin-bottom: 20px;
 }
@@ -370,9 +374,26 @@ main{
 }
 
 .paragraph-text{
-  border-color: #454545;
   font-size: 24px;
+  color: #454545;
   font-weight: 400;
+}
+
+.local-img{
+  height: 120vh;
+}
+
+.space-btw{
+  justify-content: space-between;
+}
+
+.space-ard{
+  justify-content: space-around;
+}
+
+.title-local{
+  font-size: 90px;
+  font-weight: 600;
 }
 
 .line-separate {
@@ -472,13 +493,19 @@ main{
 }
 
 .dr-small{
+  color: #000;
   font-size: 14px;
   font-weight: 400;
 }
 
 .dr-big{
+  color: #000;
   font-size: 24px;
   font-weight: 600;
+}
+
+.dr-text{
+  color: #000;
 }
 
 .btn-experience{
