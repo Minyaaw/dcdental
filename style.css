@@ -114,7 +114,7 @@ margin-top: 20%;
 
 /* HEADER */
 
-header {
+header{
   width: calc(100% - 200px);
   position: fixed;
   top: 20px;
@@ -306,7 +306,7 @@ main{
   animation-duration: 0.6s;
 }
 
-@-webkit-keyframes fromtop{
+@keyframes fromtop{
   from {left: -100px; opacity: 0;}
   to {left: 0px; opacity: 1;}
 }
