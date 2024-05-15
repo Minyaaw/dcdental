@@ -4,7 +4,13 @@
 *
 body{
   font-family: "Poppins", sans-serif;
-  margin: 20px 100px;
+  margin: 0;
+  padding: 0;
+}
+
+header, main{
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 h1{
@@ -76,13 +82,10 @@ h5{
 
 .d-flex{
   display: flex;
-  align-items: center;
-  gap: 20px;
   color: #FFF;
-}
-
-.content-hero{
-margin-top: 20%;
+  img{
+    object-fit: contain;
+  }
 }
 
 .a-center{
@@ -95,6 +98,7 @@ margin-top: 20%;
 
 .mt-85{
   margin-top: 85px;
+  padding-bottom: 30px;
 }
 
 .mt-10{
@@ -107,26 +111,29 @@ margin-top: 20%;
 
 .mt-40{
   margin-top: 40px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 .mt-70{
   margin-top: 70px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 .mt-90{
   margin-top: 90px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 .mt-110{
   margin-top: 110px;
+  margin-bottom: 70px;
 }
 
 .mb-20{
   margin-bottom: 20px;
-}
-
-.container-hero{
- margin: 0px 100px;
 }
 
 /* HEADER */
@@ -166,30 +173,26 @@ ul{
 
 /* HERO SECTION */
 
-.img-bg{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  z-index: -1;
-}
-
 .hero-section{
+  background-image: url('/assets/bg-img-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100vh;
 } 
 
-.widht-60{
-  padding-top: 16%;
+.content-hero{
+  padding-top: 10%;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .scroll-down-center{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 7%;
+  margin-top: 10%;
 }
 
 /* MAIN */
@@ -200,14 +203,18 @@ main{
   justify-content: space-between;
 }
 
+.header-style{
+  position: relative;
+}
+
 .img-behide{
   background-image: url("/public/images/happyemoji.png");
-  background-repeat: no-repeat;
+  background-size: cover;
+  top: -300px;
+  left: -150px;
   position: absolute;
-  top: 120%;
-  left: -10%;
-  width: 100%;
-  height: 100%;
+  width: 800px;
+  height: 800px;
   z-index: -1;
 }
 
@@ -217,6 +224,7 @@ main{
   grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 10px;
   grid-column-gap: 10px;
+  margin-top: 30px;
 }
 
 .card1{
@@ -356,6 +364,84 @@ main{
   z-index: 2;
 }
 
+/* SLIDER */
+.container-slider{
+  padding: 0;
+  margin: 0;
+}
+
+.slider-wrapper{
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.slider{
+  display: flex;
+  aspect-ratio: 16/20;
+  overflow: hidden;
+}
+
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav{
+  display: flex;
+  width: fit-content;
+  position: relative;
+  padding: 10px;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+
+  gap: 10px;
+  background-color: black;
+}
+
+.slider-nav span{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  background-color: #000;
+  transition: background-color 0.6s ease;
+  display: inline-block;
+}
+
+.slider-nav span:hover{
+  background-color: #EB6D12;
+  cursor: pointer ;
+}
+
+.slider-nav .dot.active {
+  background-color: #ffffff;
+  width: 120px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  animation: buttonGrow 0.5s ease forwards;
+}
+
+@keyframes buttonGrow {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.arrow-animation{
+  position: relative;
+  top: 15%;
+  left: 28%;
+}
+
 /* SPECIAL ELEMENTS */
 
 .paragraph-header{
@@ -377,6 +463,7 @@ main{
   font-size: 24px;
   color: #454545;
   font-weight: 400;
+  width: 70%;
 }
 
 .local-img{
@@ -388,7 +475,14 @@ main{
 }
 
 .space-ard{
-  justify-content: space-around;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.bg-white-cards{
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.15);
 }
 
 .title-local{
@@ -396,9 +490,10 @@ main{
   font-weight: 600;
 }
 
-.line-separate {
+.line-separate hr {
   width: 100%;
   border-color: #828282;
+  align-items: center;
 }
 
 .cta-rdv{
@@ -561,10 +656,6 @@ main{
 
 footer{
   background: #F8F8F8;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
   p {
     color: #000;
   }
