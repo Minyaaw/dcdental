@@ -8,6 +8,7 @@
     h1{
         text-align: center;
         font-size: 40px;
+        width: 100%;
         margin: 0;
         padding: 0;
     }
@@ -119,11 +120,7 @@
         padding: 20px;
         top: 30%;
     }
-
-    .cta-rdv{
-        width: 210px;
-    }
-
+      
     .btns-preview{
         flex-direction: column;
         gap: 10px;
@@ -149,6 +146,10 @@
     }
 
     /* DOCTORS */
+    .doctors-section{
+        margin: 0;
+    }
+
     .space-card{
         display: flex;
         flex-direction: column;
@@ -204,8 +205,7 @@
         flex-direction: column;   
     }
 
-    /* SPECIAL ELEMENTS  CALA A BOCA PÁRA DE RECLAMAR KKKKKKKKKKKKK*/
-
+    /* SPECIAL ELEMENTS */
 
     .card-body{
         width: 300px;
@@ -216,6 +216,9 @@
     }
 
     .header-info-doctors{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
         img{
             width: 100%;
         }
@@ -281,7 +284,7 @@
 
     .mt-40{
         margin-top: 40px;
-      }
+    }
 
     .mt-70{
         margin-top: 20px;
@@ -298,9 +301,18 @@
     h1{
         text-align: center;
         font-size: 60px;
-
+        width: 100%;
     }
 
+    h2{
+        text-align: center;
+    }
+    
+    .h3-rdv{
+        font-size: 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
 
     header{
         width: 100%;
@@ -324,6 +336,8 @@
         font-size: 14px;
         font-weight: 600;
     }
+
+    /* HEADER */
 
     .hero-section{
         background-position: left 35% bottom 30%;
@@ -354,5 +368,210 @@
 
     .hero-paragraph-text{
      text-align: center;
+    }
+
+    /* MAIN */
+
+    main{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin: 0;
+    }
+
+    .header-style{
+        margin: 0 20px;
+    }
+
+    .img-behide{
+        width: 500px;
+        height: 500px;
+        top: -290px;
+        left: 50%;
+        transform: translate(-40%);
+    }
+
+    .preview{
+        padding: 20px;
+        top: 30%;
+    }
+
+    /* SLIDER */
+
+    .slider-wrapper{
+        width: 100%; 
+     }
+ 
+     .arrow-animation{
+        display: none;
+     }
+ 
+     .space-ard{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+     }
+ 
+     /*REUSABLE CLASSES*/
+    
+    .space-btw{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paragraph-text{
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .mt-40{
+        margin-top: 40px;
+    }
+
+    .mt-70{
+        margin-top: 20px;
+    } 
+
+    .mt-90{
+        margin: 0;
+    }
+
+    .cta-close{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* CARD DOCTORS */
+
+    .space-card{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .padding-inside{
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-general{
+        width: 600px;
+        border-radius: 26px;
+        padding: 30px;
+        box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .position-infos-doctors{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .position-contents{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .icon-star-dc{
+        width: 20px;
+        height: 20px;
+    }
+
+    .sub-title{
+        color: #000000;
+        margin: 0px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: column; 
+        margin: 0;
+    }
+
+    .content-info{
+        display: flex;
+        align-items: center; 
+        flex-direction: column;   
+    }
+
+
+    /* SPECIAL ELEMENTS */
+
+    .card-body{
+        width: 300px;
+    }
+    
+    .title-local{
+        font-size: 52px;
+    }
+    
+    .space-btw{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .header-info-doctors{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+
+    .infos-doctors{
+        width: 100%;
+    }
+
+    .dr-small{
+        margin: 0px;
+        padding: 0px;
+        font-size: 14px;
+    }
+
+    .dr-big{
+        font-size: 24px;
+        margin: 0px;
+    }
+
+    .btn-experience{
+        display: flex;
+        align-items: center;
+    }
+
+    .years-exp{
+        color: #000;
+    }
+
+    .p-expertise{
+        display: none;
+    }
+
+    .main-expertise{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .text-paragraph{
+        color: #000;
+    }
+
+    .cta-close{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
