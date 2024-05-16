@@ -1,19 +1,21 @@
-const modal = document.getElementById('modal');
+const modals = document.querySelectorAll('.preview');
 const modalBtns = document.querySelectorAll('.modal-btn');
-const closeBtn = document.querySelector('.cta-close');
+const closeBtns = document.querySelectorAll('.cta-close');
 const overlay = document.getElementById('overlay');
 const scaleActive = document.querySelectorAll('.scaleActive');
 
-modalBtns.forEach(function(btn) {
+modalBtns.forEach(function(btn, index) {
     btn.addEventListener('click', function() {
-        openModal();
+        openModal(index);
         activateCard(btn);
     });
 });
 
-closeBtn.addEventListener('click', function() {
-    closeModal();
-    deactivateAllCards();
+closeBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        closeModal();
+        deactivateAllCards();
+    });
 });
 
 overlay.addEventListener('click', function() {
@@ -21,13 +23,21 @@ overlay.addEventListener('click', function() {
     deactivateAllCards();
 });
 
-function openModal() {
-    modal.style.display = 'block';
+function openModal(index) {
+    modals.forEach(function(modal, i) {
+        if (i === index) {
+            modal.style.display = 'block';
+        } else {
+            modal.style.display = 'none';
+        }
+    });
     overlay.style.display = 'block';
 }
 
 function closeModal() {
-    modal.style.display = 'none';
+    modals.forEach(function(modal) {
+        modal.style.display = 'none';
+    });
     overlay.style.display = 'none';
 }
 
